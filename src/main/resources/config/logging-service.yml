@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: logging-service
+  
+logging:
+  level:
+    root: INFO
+    com.logging: DEBUG
+  
+  file:
+    name: logs/logging-service.log
+    path: logs/
+
+server:
+  port: 8082
+
+log:
+  retention:
+    days: 7
+    size: 10MB
+  
+  format:
+    pattern: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    json: false
